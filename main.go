@@ -47,6 +47,5 @@ func index(w http.ResponseWriter, req *http.Request) {
 		mf.Seek(0, 0)
 		io.Copy(nf, mf)
 	}
-
 	tpl.ExecuteTemplate(w, "index.gohtml", nil)
 }
